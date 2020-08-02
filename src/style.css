@@ -1,0 +1,51 @@
+.new-list-input {
+	border: 2px solid black;
+	margin-right: 5px;
+	height: 19px;
+}
+
+.title{
+	font-size: 60px;
+	display: block;
+	font-weight: 800;
+}
+
+.bg{
+	width: 400px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.submitBtn{
+	background-color: rgb(245, 211, 22);
+	color: black;
+	border: none;
+	width: 40px;
+	height: 25px;
+}
+
+.modify-input{
+	max-width: 200px;
+}
+
+.btn-wrap{
+	float: right;
+}	
+
+.modifyBtn{
+	border:none;
+	background-color: lightgrey;
+	width: 50px;
+}
+
+.deleteBtn{
+	margin-left:3px;
+	background-color: lightcoral;
+	border:none;
+}
+
+.list-form{
+	text-align: center;
+	margin-bottom: 30px;
+}
