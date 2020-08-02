@@ -13,10 +13,6 @@ class Todolist extends Component {
       	inputValue: '',
       	list: ["watch Movie", "hair cut", 'buy clothes']
       }
-      this.handleInputChange = this.handleInputChange.bind(this);
-      this.handleBtnClick = this.handleBtnClick.bind(this);
-      this.handleItemDelete = this.handleItemDelete.bind(this);
-      this.handleItemModify = this.handleItemModify.bind(this);
 	}
 
 	render() {
@@ -55,14 +51,14 @@ getTodoItem() {
 	})
 }
 
-	handleInputChange(e) {
+	handleInputChange = (e) => {
 		const value = e.target.value;
 		this.setState(() => ({
 				inputValue: value
 	}));
 	}
 
-	handleBtnClick(e) {
+	handleBtnClick = (e) => {
 		e.preventDefault();
 		this.setState((prevState) => ({
 			list: [...prevState.list, prevState.inputValue],
@@ -70,7 +66,7 @@ getTodoItem() {
 		}));
 	}
 
-	handleItemDelete(index) {
+	handleItemDelete = (index) => {
 		this.setState((prevState) => {
 			const list = [...prevState.list];
 			list.splice(index, 1);
@@ -79,7 +75,7 @@ getTodoItem() {
 		this.todoInput.focus();
 	}
 
-	handleItemModify(index, content) {
+	handleItemModify = (index, content) => {
 		this.setState((prevState) => {
 			const list = [...prevState.list];
 

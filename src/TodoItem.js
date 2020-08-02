@@ -10,9 +10,6 @@ class TodoItem extends Component {
 			buttonName: "modify",
 			content: this.props.content
 		}
-		this.delselectedItem = this.delselectedItem.bind(this);
-		this.modifySelectedItem = this.modifySelectedItem.bind(this);
-		this.inputFormHandler = this.inputFormHandler.bind(this);
 	}
 	
 	shouldComponentUpdate (newProps, newState) {
@@ -23,14 +20,14 @@ class TodoItem extends Component {
 		}
 	}
 	
-	delselectedItem() {
+	delselectedItem = () => {
 		// const deleteItem = thie.props.deleteItem,
 		// const index = this.props.index 와 같은 뜻.
 		const { deleteItem, index } = this.props;
 		deleteItem(index);
 	}
 		
-	modifySelectedItem() {
+	modifySelectedItem = () => {
 		this.state.mode === "read" ? 
 		this.setState({mode: "modify", buttonName: "save"}) : 
 		this.setState({mode:"read", buttonName: "modify"})
@@ -39,7 +36,7 @@ class TodoItem extends Component {
 		const { modifyItem, index } = this.props;
 		modifyItem(index, this.state.content)
 	}
-	inputFormHandler(e){
+	inputFormHandler = (e) => {
 		e.preventDefault();
 		this.setState({
 			content : e.target.value
